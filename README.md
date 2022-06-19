@@ -1,0 +1,3 @@
+# Iterative DNS Resolver
+
+This project is creates our own iterative DNS query resolver to implement the DNS protocol. The program receives one optional flag (-m) and one required argument: the host name we’d like to resolve. If the flag is absent, the client is asking to resolve a host name’s IP address. If the flag is present, the client is asking to find the mail exchange for a domain. The root-servers.txt file contains a list of IP addresses for root DNS servers. The program uses this file to find a root server and iteratively works its way down the DNS hierarchy, querying a root server, then a top-level domain (TLD) server, and finally an authoritative server(s), where it can resolve the requested host name.
